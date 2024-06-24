@@ -1,9 +1,7 @@
 
 
-const cardLeft = () => {
+export const CardLeft = () => {
   return (
-    <div>cardLeft</div>
+    <div>CardLeft</div>
   )
 }
-
-export default cardLeft

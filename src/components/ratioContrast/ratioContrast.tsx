@@ -1,9 +1,7 @@
 
 
-const ratioContrast = () => {
+export const RatioContrast = () => {
   return (
-    <div>ratioContrast</div>
+    <div>RatioContrast</div>
   )
 }
-
-export default ratioContrast

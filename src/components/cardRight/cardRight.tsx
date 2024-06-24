@@ -1,9 +1,17 @@
+import { useState } from 'react'
+import './cardRight.scss'
 
-
-const cardRight = () => {
-  return (
-    <div>cardRight</div>
-  )
+type CardRightProps = {
+  textColor: string
+  backgroundColor: string
 }
 
-export default cardRight
+export const CardRight = ({textColor, backgroundColor}: CardRightProps) => {
+  // const [contentItem, setContentItem] = useState<>('')
+
+  return (
+    <div className='cardRight'>
+      
+    </div>
+  )
+}

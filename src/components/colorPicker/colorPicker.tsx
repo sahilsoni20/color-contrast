@@ -1,9 +1,7 @@
 
 
-const colorPicker = () => {
+export const ColorPicker = () => {
   return (
-    <div>colorPicker</div>
+    <div>ColorPicker</div>
   )
 }
-
-export default colorPicker
