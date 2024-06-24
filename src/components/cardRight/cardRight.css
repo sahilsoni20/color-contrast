@@ -1,0 +1,19 @@
+.cardRight {
+  width: 100%;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.cardRight h3 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.cardRight p {
+  font-weight: 500;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=cardRight.css.map */

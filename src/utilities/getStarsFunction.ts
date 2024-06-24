@@ -1,4 +1,4 @@
-export const getStarsFunction = (
+export const getOverallStars = (
   grade: string,
   largeTextStars: number,
   smallTextStars: number
