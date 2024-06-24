@@ -6,20 +6,21 @@ import {
   getStarsForLargerText,
   getStarsForSmallerText,
 } from "../../utilities";
+import "./ratioContrast.css";
 
 type RatioContrastProps = {
   textColor: string;
-  backgroundcolor: string;
+  backgroundColor: string;
 };
 
-export const RatioContrast = ({
+export function RatioContrast({
   textColor,
-  backgroundcolor,
-}: RatioContrastProps) => {
-  const ratioContrast = getContrastRatio(textColor, backgroundcolor);
-  const largeTextStars = getStarsForLargerText(ratioContrast);
-  const smallTextStars = getStarsForSmallerText(ratioContrast);
-  const contrastGrade = getContrastGrade(ratioContrast);
+  backgroundColor,
+}: RatioContrastProps) {
+  const contrastRatio = getContrastRatio(textColor, backgroundColor);
+  const largeTextStars = getStarsForLargerText(contrastRatio);
+  const smallTextStars = getStarsForSmallerText(contrastRatio);
+  const contrastGrade = getContrastGrade(contrastRatio);
 
   const overallStars = getOverallStars(
     contrastGrade,
@@ -45,7 +46,7 @@ export const RatioContrast = ({
     }
   };
 
-  const getSmallTextBackground = () => {
+  const getSmallTextColorBackground = () => {
     if (smallTextStars === 3) {
       return "very-good-contrast";
     } else if (smallTextStars === 2) {
@@ -56,7 +57,7 @@ export const RatioContrast = ({
     return "";
   };
 
-  const getLargeTextBackground = () => {
+  const getLargeTextColorBackground = () => {
     if (largeTextStars === 3) {
       return "very-good-contrast";
     } else if (largeTextStars === 2) {
@@ -67,30 +68,38 @@ export const RatioContrast = ({
     return "";
   };
 
-  const smallTextColorShades = getSmallTextBackground();
-  const largeTextColorShades = getLargeTextBackground();
+  const smallTextColorShades = getSmallTextColorBackground();
+  const largeTextColorShades = getLargeTextColorBackground();
   const ratioColorShades = getRatioColorBackground();
-
   return (
     <div className="contrast-section-wrapper">
       <span className="contrast-heading">Contrast</span>
-      <div className="cibtrast-ratio-display">
+      <div className="contrast-ratio-display">
         <div className={`contrast-info ${ratioColorShades}`}>
-          <span className="ratio-value">{ratioContrast.toFixed(2)}</span>
+          <span className="ratio-value">{contrastRatio.toFixed(2)}</span>
           <div className="ratio-value-wrapper">
             <span className="grade-display">{contrastGrade}</span>
-            <span className="stars-display">{renderStars(5, overallStars.length)}</span>
+            <span className="stars-display">
+              {renderStars(5, overallStars.length)}
+            </span>
           </div>
         </div>
+
         <div className="text-rating-section">
           <div className={`small-text-rating ${smallTextColorShades}`}>
-            <span className="star-symbol">Small Text</span>
+            Small text
+            <span className="star-symbol">
+              {renderStars(3, smallTextStars)}
+            </span>
           </div>
           <div className={`large-text-rating ${largeTextColorShades}`}>
-            <span className="star-symbol">Large Text</span>
+            Large text
+            <span className="star-symbol">
+              {renderStars(3, largeTextStars)}
+            </span>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}

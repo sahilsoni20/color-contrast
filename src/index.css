@@ -10,23 +10,30 @@
   --subtitle-color: #7e7d84;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
- height: 100vh;
- display: flex;
- justify-content: center;
- align-items: center;
- background-color: #fcfdff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fcfdff;
 }
 
 button {
   cursor: pointer;
+}
+
+.title,
+.subtitle {
+  text-align: center;
 }
 
 .title {

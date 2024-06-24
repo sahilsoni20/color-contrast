@@ -4,16 +4,16 @@
   border-radius: 10px;
   padding: 10px;
   background-color: var(--white);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
 }
-.colorPicker .colorPicker,
-.textColorPicker .colorPicker {
+
+.colorPicker {
   position: absolute;
   bottom: 50px;
   right: -1px;
 }
-.colorPicker .textColorPicker,
-.textColorPicker .textColorPicker {
+
+.textColorPicker {
   position: absolute;
   bottom: 100px;
   right: -10px;

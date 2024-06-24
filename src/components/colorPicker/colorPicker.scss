@@ -1,20 +1,26 @@
-.colorPicker, 
+$box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+$border-radius: 10px;
+$padding: 10px;
+$background-color: var(--white);
+$border: 1px solid var(--border-color);
+
+.colorPicker,
 .textColorPicker {
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    border-radius: 10px;
-    padding: 10px;
-    background-color: var(--white);
-    border: 2px solid var(--border-color);
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  padding: $padding;
+  background-color: $background-color;
+  border: $border;
+}
 
-    .colorPicker {
-        position: absolute;
-        bottom: 50px;
-        right: -1px;
-    }
+.colorPicker {
+  position: absolute;
+  bottom: 50px;
+  right: -1px;
+}
 
-    .textColorPicker {
-        position: absolute;
-        bottom: 100px;
-        right: -10px;
-    }
+.textColorPicker {
+  position: absolute;
+  bottom: 100px;
+  right: -10px;
 }

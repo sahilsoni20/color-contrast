@@ -1,83 +1,105 @@
+$white: #fff;
+$border-color: #d6d6d6;
+$poor-contrast-bg: #fbd0da;
+$poor-contrast-color: #5f071c;
+$good-contrast-bg: #fbf5d0;
+$good-contrast-color: #5f5207;
+$very-good-contrast-bg: #d2fbd0;
+$very-good-contrast-color: #0d5f07;
+
 .contrast-section-wrapper {
-    .contrast-heading {
-        font-size: 0.9rem;
-        font-weight: 500;
+  .contrast-heading {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .contrast-ratio-display {
+    gap: 5px;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+
+    .ratio-value {
+      font-size: 3rem;
+      font-weight: bold;
     }
 
-    .contrast-ratio-display {
-        gap: 5px;
-        display: flex;
-        margin-top: 10px;
-        flex-direction: column;
-    }
+    .contrast-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+      padding: 30px;
+      border-radius: 10px 10px 0 0;
 
-    .contrast-ratio-display .ratio-value {
-        font-size: 3rem;
-        font-weight: bold;
-    }
+      &.poor-contrast {
+        background-color: $poor-contrast-bg;
+        color: $poor-contrast-color;
+      }
 
-    .contrast-ratio-display .contrast-info .ratio-value-wrapper {
+      &.good-contrast {
+        background-color: $good-contrast-bg;
+        color: $good-contrast-color;
+      }
+
+      &.very-good-contrast {
+        background-color: $very-good-contrast-bg;
+        color: $very-good-contrast-color;
+      }
+
+      .ratio-value-wrapper {
         display: flex;
         gap: 5px;
         font-weight: 600;
         font-size: 0.9rem;
         flex-direction: column;
         text-align: center;
+      }
     }
+  }
 
-    .stars-display {
-        display: flex;
-        gap: 3px;
-        font-size: 1.1rem;
+  .stars-display {
+    display: flex;
+    gap: 3px;
+    font-size: 1.1rem;
+  }
+
+  .star-symbol {
+    display: flex;
+    gap: 3px;
+    font-size: 0.9rem;
+  }
+
+  .text-rating-section {
+    gap: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    .small-text-rating,
+    .large-text-rating {
+      display: flex;
+      font-weight: 600;
+      align-items: center;
+      font-size: 0.9rem;
+      justify-content: space-between;
+      width: 100%;
+      padding: 20px;
+      border-radius: 0 0 10px 10px;
+
+      &.poor-contrast {
+        background-color: $poor-contrast-bg;
+        color: $poor-contrast-color;
+      }
+
+      &.good-contrast {
+        background-color: $good-contrast-bg;
+        color: $good-contrast-color;
+      }
+
+      &.very-good-contrast {
+        background-color: $very-good-contrast-bg;
+        color: $very-good-contrast-color;
+      }
     }
-
-    .star-symbol {
-        display: flex;
-        gap: 3rem;
-        font-size: 1.1rem;
-    }
-
-    .contrast-info {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 5px;
-        padding: 30px;
-        border-radius: 10px 10px 0 0;
-    }
-
-    .text-rating-section {
-        gap: 5px;
-        display: flex;
-        justify-content: space-between;
-
-        .small-text-rating, .large-text-rating {
-            display: flex;
-            font-weight: 600;
-            align-items: center;
-            font-size: 0.9rem;
-            justify-content: space-between;
-            width: 100%;
-            padding: 20px;
-            border-radius: 0 0 10px 10px;
-        }
-
-        .small-text-rating.poor-contrast,
-        .large-text-rating.poor-contrast {
-            background-color: var(--poor-contrast-bg);
-            color: var(--poor-contrast-color);
-        }
-
-        .small-text-rating.good-contrast,
-        .large-text-rating.good-contrast {
-            background-color: var(--good-contrast-bg);
-            color: var(--good-contrast-color);
-        }
-
-        .small-text-rating.very-good-contrast,
-        .large-text-rating.very-good-contrast {
-            background-color: var(--very-good-contrast-bg);
-            color: var(--very-good-contrast-color);
-        }
-    }
+  }
 }

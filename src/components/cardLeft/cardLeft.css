@@ -1,1 +1,56 @@
-/*# sourceMappingURL=cardLeft.css.map */
+.card-container {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card-container .container-wrapper {
+  display: flex;
+  gap: 20px;
+}
+.card-container .text-color-section label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card-container .text-color-section,
+.card-container .background-color-section {
+  width: 100%;
+}
+.card-container .text-color-section .input-wrapper,
+.card-container .background-color-section .input-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.card-container .text-color-section .input-wrapper input {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+}
+.card-container .background-color-section label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card-container .background-color-section .input-wrapper input {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+}
+.card-container .background-color-section .input-wrapper button,
+.card-container .text-color-section .input-wrapper button {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  position: absolute;
+  top: 17px;
+  right: 8px;
+}/*# sourceMappingURL=cardLeft.css.map */
